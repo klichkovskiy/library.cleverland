@@ -9,7 +9,6 @@ import { Button } from '../../components/button';
 import { Comment } from '../../components/comment';
 import { Loader } from '../../components/loader/loader';
 import { Rating } from '../../components/rating';
-import { HOST } from '../../constants/api';
 import { ERROR } from '../../constants/errors';
 import { FEATURE_KEY } from '../../constants/feature';
 import { NAV_MENU_ALL, NAV_MENU_MAIN } from '../../constants/nav-menu-list';
@@ -125,7 +124,7 @@ export const BookPage = () => {
                                     {bookData?.images.map(({ url }) => (
                                         <SwiperSlide key={Math.random()}>
                                             <img
-                                                src={`${HOST}${url}`}
+                                                src={url}
                                                 className={styles.swiperSlideImg}
                                                 alt='img'
                                             />
@@ -156,7 +155,7 @@ export const BookPage = () => {
                                     {bookData.images?.map(({ url }) => (
                                         <SwiperSlide key={Math.random()} data-test-id='slide-mini'>
                                             <img
-                                                src={`${HOST}${url}`}
+                                                src={url}
                                                 className={styles.swiperSlideSmallImg}
                                                 alt='img'
                                             />

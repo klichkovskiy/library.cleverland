@@ -1,7 +1,6 @@
 import { format } from 'date-fns';
 import { ru } from 'date-fns/locale';
 
-import { HOST } from '../../constants/api';
 import { Rating } from '../rating';
 
 import avatarImg from './assets/avatar.jpg';
@@ -22,11 +21,7 @@ export const Comment = ({ avatar = avatarImg, name, date, rating, text }: Commen
     return (
         <div className={styles.comment} data-test-id='comment-wrapper'>
             <div className={styles.commentBlock}>
-                <img
-                    src={avatar ? `${HOST}${avatar}` : avatarImg}
-                    alt='Аватар'
-                    className={styles.avatar}
-                />
+                <img src={avatar ? avatar : avatarImg} alt='Аватар' className={styles.avatar} />
                 <span className={styles.name} data-test-id='comment-author'>
                     {name}
                 </span>

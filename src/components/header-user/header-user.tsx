@@ -2,7 +2,6 @@ import { Link, useNavigate } from 'react-router-dom';
 import classNames from 'classnames';
 import Cookies from 'js-cookie';
 
-import { HOST } from '../../constants/api';
 import { NAV_MENU_MAIN } from '../../constants/nav-menu-list';
 import { ROUTES } from '../../constants/routes';
 import { USER } from '../../constants/user';
@@ -31,11 +30,7 @@ export const HeaderUser = ({ userFirstName, avatar }: HeaderUserProps) => {
         <div className={styles.headerUser} data-test-id='profile-header'>
             <span className={styles.userName}>{`Привет, ${userFirstName}!`}</span>
             <div className={styles.userImg}>
-                <img
-                    src={avatar ? `${HOST}${avatar}` : USER.img}
-                    alt='user-img'
-                    className={styles.img}
-                />
+                <img src={avatar ? avatar : USER.img} alt='user-img' className={styles.img} />
             </div>
             <div data-test-id='popup' className={classNames(styles.popUp, styles.active)}>
                 <Link

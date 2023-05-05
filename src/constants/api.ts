@@ -1,4 +1,4 @@
-export const HOST = 'https://strapi.cleverland.by';
+export const HOST = 'https://library-cleverland-2jfze.ondigitalocean.app';
 export const BASE_URL = `${HOST}/api`;
 export const BASE_AUTH_URL = `${BASE_URL}/auth`;
 

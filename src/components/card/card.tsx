@@ -2,7 +2,6 @@ import { SyntheticEvent } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import classNames from 'classnames';
 
-import { HOST } from '../../constants/api';
 import { MenuViewEnum } from '../../constants/menu-view';
 import { NAV_MENU_ALL, NAV_MENU_MAIN } from '../../constants/nav-menu-list';
 import { bookingDeleteRequest, toggleBookReviewModal } from '../../store/books';
@@ -86,7 +85,7 @@ export const Card = (props: BookType) => {
         <Link to={linkPath} key={id} onClick={resetSearchValue}>
             <li className={classNameCard('card')} data-test-id='card'>
                 <div className={classNameCard('cardImg')}>
-                    <img src={image?.url ? `${HOST}${image?.url}` : IconPlugImg} alt={title} />
+                    <img src={image?.url ? image.url : IconPlugImg} alt={title} />
                 </div>
                 <div className={classNameCard('rating')}>
                     {rating || rating === 0 ? (

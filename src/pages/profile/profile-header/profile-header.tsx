@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
-import { HOST } from '../../../constants/api';
 import { useAppDispatch } from '../../../store/hooks';
 import { uploadAvatarRequest } from '../../../store/user';
 
@@ -64,7 +63,7 @@ export const ProfileHeader = ({ userFirstName, userLastName, id, avatar }: Profi
                 </label>
                 <img
                     className={styles.avatar}
-                    src={avatar ? `${HOST}${avatar}` : imgFile}
+                    src={avatar ? avatar : imgFile}
                     alt='profile-avatar'
                 />
             </form>
