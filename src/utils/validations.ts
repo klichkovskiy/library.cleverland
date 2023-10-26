@@ -33,10 +33,8 @@ export const validateForLatinLetters = (fieldValue: string) =>
 export const isCorrectPassword = (password: string) => {
     let requirementCounter = 0;
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     password?.split('').some((el) => REGEXP.digit.test(el)) && (requirementCounter += 1);
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-expressions
     password?.split('').some((el) => REGEXP.uppercase.test(el)) && (requirementCounter += 1);
 
     return password?.length >= PASSWORD.minLength && requirementCounter >= 2;
