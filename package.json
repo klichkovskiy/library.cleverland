@@ -36,7 +36,6 @@
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
     "@types/react-text-mask": "^5.4.11",
-    "arui-presets-lint": "^6.0.1",
     "cypress": "^11.0.1",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-airbnb-typescript": "^17.0.0",
@@ -75,7 +74,6 @@
     "e2e": "start-server-and-test start http-get://localhost:3000 cy",
     "e2e:run": "start-test 3000 'cypress run'"
   },
-  "prettier": "arui-presets-lint/prettier",
   "browserslist": {
     "production": [
       ">0.2%",

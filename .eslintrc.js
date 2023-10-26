@@ -1,5 +1,4 @@
 module.exports = {
-    extends: [require.resolve('arui-presets-lint/eslint'), 'plugin:react/jsx-runtime'],
     parserOptions: {
         project: ['./tsconfig.eslint.json',/* './cypress/tsconfig.json' */],
     },
