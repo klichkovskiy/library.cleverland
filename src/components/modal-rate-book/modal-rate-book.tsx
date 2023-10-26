@@ -76,7 +76,6 @@ export const ModalRateBook = () => {
         if (bookId && book?.id !== bookId) {
             dispatch(bookRequest(bookId));
         }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [book?.id !== bookId]);
 
     useEffect(() => {
@@ -92,7 +91,6 @@ export const ModalRateBook = () => {
     useEffect(() => {
         setValue('text', commentUser?.text as string);
         setValue('rating', commentUser?.rating as number);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [book]);
 
     return (
