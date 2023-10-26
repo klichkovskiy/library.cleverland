@@ -20,4 +20,5 @@ export const FEATURE_KEY_OBJECT = {
     weight: 'Вес',
     ISBN: 'ISBN',
     manufacturer: 'Изготовитель',
+    manufacturer1: 'Изготовитель1',
 };
