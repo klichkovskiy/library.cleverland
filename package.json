@@ -2,6 +2,7 @@
   "name": "library.cleverland",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://klichkovskiy.github.io/library.cleverland/",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.6",
     "axios": "^1.1.3",
